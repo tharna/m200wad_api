@@ -65,9 +65,6 @@ class m200wadClient implements m200wadClientInterface {
     }
 
     $headers = $response->getHeaders();
-    \Drupal::logger('m200wad_api')->notice('Posted to 200wad with headers:  "%error"', ['%error' => print_r($response->getHeaders(), 1)]);
-    \Drupal::logger('m200wad_api')->notice('Posted to 200wad with body:  "%error"', ['%error' => print_r($response->getBody(), 1)]);
-    \Drupal::logger('m200wad_api')->notice('Posted to 200wad with content:  "%error"', ['%error' => print_r($response->getBody->getContents(), 1)]);
     return $response->getBody()->getContents();
   }
 

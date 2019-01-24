@@ -47,7 +47,7 @@ function yourmodule_node_insert(NodeInterface $node) {
       'title' => $node->getTitle(),
       'content' => $node->body->getValue()[0]['value'],
       'access_rights' => 'public',
-      'status' => 'published',
+      'status' => ($node->isPublished()) ? 'published' : 'draft',
       'categories' => $categories,
       'canonical_url' => $node->toUrl()->setAbsolute()->toString()
     ];
