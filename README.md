@@ -1,6 +1,8 @@
 # 200WAD API
 API client for 200 Words a day. https://200wordsaday.com/makers 
 
+Drupal.org project page: https://www.drupal.org/project/m200wad_api
+
 ## Configuration
 
 ### Get your personal access token
