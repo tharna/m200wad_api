@@ -58,7 +58,7 @@ class m200wadClient implements m200wadClientInterface {
       );
     }
     catch (RequestException $exception) {
-      drupal_set_message(t('Failed to complete 200 Words a day Task "%error"', ['%error' => $exception->getMessage()]), 'error');
+      \Drupal::messenger()->addMessage(t('Failed to complete 200 Words a day Task "%error"', ['%error' => $exception->getMessage()]), 'error');
 
       \Drupal::logger('m200wad_api')->error('Failed to complete 200 Words a day Task "%error"', ['%error' => $exception->getMessage()]);
       return FALSE;
