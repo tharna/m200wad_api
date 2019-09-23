@@ -78,7 +78,8 @@ class m200wadClient implements m200wadClientInterface {
     }
     if ($query) {
       $options['query'] = $query;
-    } else {
+    }
+    else {
       $options['query'] = [];
     }
 
